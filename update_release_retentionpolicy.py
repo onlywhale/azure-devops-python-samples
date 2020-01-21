@@ -18,6 +18,3 @@ rel_def = release_client.get_release_definition(project_name,1, property_filters
 rel_def.environments[0].retention_policy = {"daysToKeep": 20, "releasesToKeep": 3, "retainBuild": True}
 
 resp = release_client.update_release_definition(release_definition=rel_def,project=project_name)
-
-update_definition = release_client.get_release_definition(project_name,1)
-
